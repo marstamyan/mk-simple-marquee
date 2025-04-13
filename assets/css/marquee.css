@@ -1,0 +1,126 @@
+.mk-marquee {
+  --mk-marquee-gap: 30px;
+  --mk-marquee-bg-color: dodgerblue;
+  --mk-marquee-text-color: white;
+  --mk-marquee-font-size: 16px;
+  --mk-marquee-speed: 10s;
+  --mk-marquee-height: 50px;
+
+  position: fixed;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  background-color: var(--mk-marquee-bg-color);
+  height: var(--mk-marquee-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.mk-marquee__wrapper {
+  display: flex;
+  width: max-content;
+  animation: mk-marquee-scroll var(--mk-marquee-speed) linear infinite;
+}
+
+.mk-marquee__content {
+  display: flex;
+  align-items: center;
+  gap: var(--mk-marquee-gap);
+  list-style: none;
+  font-size: var(--mk-marquee-font-size);
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin: 0;
+}
+
+.mk-marquee__content li,
+.mk-marquee__content li * {
+  word-spacing: 4px;
+  color: var(--mk-marquee-text-color);
+}
+
+.mk-marquee__content a {
+  text-decoration: none;
+  transition: opacity 0.3s ease-in;
+}
+
+.mk-marquee__content a:hover {
+  color: inherit;
+  opacity: 0.8;
+}
+
+@keyframes mk-marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.mk-marquee--pause-on-hover:hover .mk-marquee__wrapper {
+  animation-play-state: paused;
+}
+
+.mk-marquee {
+  --mk-marquee-gap: 30px;
+  --mk-marquee-bg-color: dodgerblue;
+  --mk-marquee-text-color: white;
+  --mk-marquee-font-size: 16px;
+  --mk-marquee-speed: 10s;
+  --mk-marquee-height: 50px;
+
+  position: fixed;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  user-select: none;
+  background-color: var(--mk-marquee-bg-color);
+  height: var(--mk-marquee-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+.mk-marquee__wrapper {
+  display: flex;
+  width: max-content;
+  animation: mk-marquee-scroll var(--mk-marquee-speed) linear infinite;
+}
+
+.mk-marquee__content {
+  display: flex;
+  align-items: center;
+  gap: var(--mk-marquee-gap);
+  list-style: none;
+  font-size: var(--mk-marquee-font-size);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.mk-marquee__content a {
+  color: var(--mk-marquee-text-color);
+  text-decoration: none;
+  transition: opacity 0.3s ease-in;
+}
+
+.mk-marquee__content a:hover {
+  opacity: 0.8;
+}
+
+@keyframes mk-marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.mk-marquee--pause-on-hover:hover .mk-marquee__wrapper {
+  animation-play-state: paused;
+}
