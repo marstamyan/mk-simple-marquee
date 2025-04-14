@@ -1,11 +1,10 @@
 .mk-marquee {
   --mk-marquee-gap: 30px;
-  --mk-marquee-bg-color: dodgerblue;
-  --mk-marquee-text-color: white;
+  --mk-marquee-bg-color: #000;
+  --mk-marquee-text-color:#fff;
   --mk-marquee-font-size: 16px;
   --mk-marquee-speed: 10s;
   --mk-marquee-height: 50px;
-
   position: fixed;
   left: 0;
   width: 100%;
@@ -63,26 +62,6 @@
 
 .mk-marquee--pause-on-hover:hover .mk-marquee__wrapper {
   animation-play-state: paused;
-}
-
-.mk-marquee {
-  --mk-marquee-gap: 30px;
-  --mk-marquee-bg-color: dodgerblue;
-  --mk-marquee-text-color: white;
-  --mk-marquee-font-size: 16px;
-  --mk-marquee-speed: 10s;
-  --mk-marquee-height: 50px;
-
-  position: fixed;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  user-select: none;
-  background-color: var(--mk-marquee-bg-color);
-  height: var(--mk-marquee-height);
-  z-index: 1000;
-  display: flex;
-  align-items: center;
 }
 
 .mk-marquee__wrapper {
